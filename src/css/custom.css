@@ -1,0 +1,62 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+
+:root {
+  --ifm-color-primary: #dec4ff;
+  --ifm-color-primary-dark: #c597ff;
+  --ifm-color-primary-darker: #b880ff;
+  --ifm-color-primary-darkest: #923dff;
+  --ifm-color-primary-light: #f7f1ff;
+  --ifm-color-primary-lighter: #ffffff;
+  --ifm-color-primary-lightest: #ffffff;
+  --ifm-heading-color:#000;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #dec4ff;
+  --ifm-color-primary-dark: #c597ff;
+  --ifm-color-primary-darker: #b880ff;
+  --ifm-color-primary-darkest: #923dff;
+  --ifm-color-primary-light: #f7f1ff;
+  --ifm-color-primary-lighter: #ffffff;
+  --ifm-color-primary-lightest: #ffffff;
+  --ifm-heading-color:#ffffff;
+}
+
+.hero__title {
+    font-size: 4rem;
+    --ifm-heading-color:#000;
+}
+
+.hero__subtitle {
+    font-size: 2rem;
+    --ifm-heading-color:#000;
+}
+
+.hero__subsubtitle {
+    font-size: 1.5rem;
+    --ifm-heading-color:#000;
+}
+
+.footer {
+  padding:12px;
+}
+
+.alert--info {
+  --ifm-alert-background-color: var(--ifm-background-color);
+  --ifm-alert-border-color: var(--ifm-color-primary-dark);
+}
+
+/* Hide observable inspector cells */
+
+.hideable-md, .observablehq--inspect {
+  visibility: hidden;
+  display:block;
+  height:0;
+}
+

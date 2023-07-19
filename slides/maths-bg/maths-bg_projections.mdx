@@ -1,0 +1,45 @@
+---
+id: maths-bg_projections
+sidebar_position: 2
+title: Projection Set Algorithms
+hide_table_of_contents: true
+hide_title: true
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import TwoConvexSetsComponent from '@site/src/components/TwoConvexSetsComponent.js';
+import TwoNonconvexSetsComponent from '@site/src/components/TwoNonconvexSetsComponent.js';
+import FlowerSetsComponent from '@site/src/components/FlowerSetsComponent.js';
+
+## Projection Set Algorithms
+
+- Proximal gradient or "projection-set" methods are a very powerful technique to solve non-convex inverse problems  
+- Suppose we wish to find the solution at the intersection of two sets
+  - The catch: we're only allowed to operate on one set a time
+
+<Tabs>
+  <TabItem value="two-convex-sets" label="Two Convex Sets" default>
+  <ul>
+    <li> For two convex sets, the naive "alternating projections" algorithm is guaranteed to converge </li>
+  </ul>
+    <TwoConvexSetsComponent />
+  </TabItem>
+  <TabItem value="two-nonconvex-sets" label="Two Non-convex Sets">
+  <ul>
+    <li> For two convex sets, the naive "alternating projections" algorithm is guaranteed to converge </li>
+    <li> What about two non-convex sets where our naive algorithm gets stuck? </li>
+  </ul>
+    <TwoNonconvexSetsComponent />
+  </TabItem>
+  <TabItem value="multiple-sets" label="Multiple Non-convex Sets">
+  <ul>
+    <li> For two convex sets, the naive "alternating projections" algorithm is guaranteed to converge </li>
+    <li> What about two non-convex sets where our naive algorithm gets stuck? </li>
+    <li> Multiple non-convex sets &rarr; consistency across parallel projections </li>
+  </ul>
+    <FlowerSetsComponent />
+  </TabItem>
+</Tabs>
+

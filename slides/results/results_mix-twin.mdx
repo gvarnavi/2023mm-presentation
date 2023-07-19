@@ -1,0 +1,33 @@
+---
+id: results_mix-twin
+sidebar_position: 4
+title: Mixed Twinned Antiferromagnets
+hide_table_of_contents: true
+hide_title: true
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import MixTwinAtomicModelImage from '@site/static/img/NiO-mix-twin_atomic-model.svg';
+import MixTwinGroundTruthImage from '@site/static/img/NiO-mix-twin_ground-truth.svg';
+import MixTwinJointImage from '@site/static/img/NiO-mix-twin_joint-recon.svg';
+
+## Mixed Twinned Antiferromagnetic NiO
+
+- Since our technique makes no use of prior-information (notably the use of periodicity)
+  - It can reconstruct more complex magnetizations, such as a twinned NiO antiferromagnet
+  - And even differentiate between different magnetic orderings for the same twinned structure
+
+<Tabs>
+  <TabItem value="atomic-model" label="Atomic Model" default>
+    <MixTwinAtomicModelImage width="80%" height="auto"/>
+  </TabItem>
+  <TabItem value="ground-truth" label="Ground Truth" default>
+    <MixTwinGroundTruthImage width="80%" height="auto"/>
+  </TabItem>
+  <TabItem value="joint-recon" label="Simultaneous Adjoint Reconstruction" default>
+    <MixTwinJointImage width="80%" height="auto"/>
+  </TabItem>
+</Tabs>
+

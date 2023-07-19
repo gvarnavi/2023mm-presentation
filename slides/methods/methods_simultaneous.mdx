@@ -1,0 +1,55 @@
+---
+id: methods_simultaneous
+sidebar_position: 3
+title: Simultaneous Reconstructions
+hide_table_of_contents: true
+hide_title: true
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+## Simultaneous Reconstruction
+
+- Accelerated electron beams interacting with a thin sample acquire phase shifts:  
+
+$$
+\begin{aligned}
+	\phi\left(\boldsymbol{r}_{\perp}\right) &= \phi_e\left(\boldsymbol{r}_{\perp}\right) + \phi_m \left(\boldsymbol{r}_{\perp}\right) \\
+	&= \frac{e}{\hbar v} \int_L V(\boldsymbol{r}_{\perp},z) dz - \frac{e}{\hbar} \int_L \boldsymbol{A}(\boldsymbol{r}_{\perp},z) \cdot d \boldsymbol{r}
+\end{aligned}
+$$
+
+<Tabs>
+<TabItem value="naive" label="'Naive' Subtraction" default>
+
+- Electrostatic contribution is invariant under time-reversal symmetry, while magnetic contribution changes sign
+  - For inversion-symmetric materials, we can separate these signals by "flipping" the sample
+
+$$
+	\phi_e = \frac{1}{2}\left(\phi^{\rightarrow} + \phi^{\leftarrow} \right) \qquad \text{and} \qquad
+	\phi_m = \frac{2}{2}\left(\phi^{\rightarrow} - \phi^{\leftarrow} \right)
+$$
+</TabItem>
+
+<TabItem value="simultaneous" label="Simultaneous Adjoint Operator">
+
+- Since we know how the forward-model for our measurement changes when we "flip" the sample
+
+$$
+\begin{aligned}
+  \psi_j^{\rightarrow} &= \mathcal{P} \times \exp(i V) \times \exp(i A_z)  \\
+  \psi_j^{\leftarrow} &= \mathcal{P} \times \exp(i V) \times \exp(-i A_z)
+\end{aligned}
+$$
+  
+- We can reconstruct the electrostatic and magnetic contributions jointly using an appropriate adjoint:
+
+$$
+\begin{aligned}
+  V' &= V + \beta \times \left(\Re\left\{ -i \exp(-i (V{\color{red} +}A_z)) \times \mathcal{P}^* \times \Delta \psi_j^{\rightarrow} \right\} {\color{red} +} \Re\left\{ -i \exp(-i (V{\color{red} -}A_z)) \times \mathcal{P}^* \times \Delta \psi_j^{\leftarrow} \right\} \right) /\left|\mathcal{P}\times\exp(i A_z)\right|^2 \\
+  A_z' &= A_z + \beta \times \left(\Re\left\{ -i \exp(-i (V{\color{red} +}A_z)) \times \mathcal{P}^* \times \Delta \psi_j^{\rightarrow} \right\} {\color{red} -} \Re\left\{-i \exp(-i (V{\color{red} -}A_z)) \times \mathcal{P}^* \times \Delta \psi_j^{\leftarrow} \right\} \right) /\left|\mathcal{P}\times\exp(i V)\right|^2
+\end{aligned}
+$$
+</TabItem>
+</Tabs>

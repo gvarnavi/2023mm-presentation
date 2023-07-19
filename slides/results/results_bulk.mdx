@@ -1,0 +1,39 @@
+---
+id: results_bulk
+sidebar_position: 2
+title: Bulk Antiferromagnets
+hide_table_of_contents: true
+hide_title: true
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import BulkAtomicModelImage from '@site/static/img/NiO-bulk_atomic-model.svg';
+import BulkGroundTruthImage from '@site/static/img/NiO-bulk_ground-truth.svg';
+import BulkNaiveImage from '@site/static/img/NiO-bulk_naive-recon.svg';
+import BulkJointImage from '@site/static/img/NiO-bulk_joint-recon.svg';
+
+## Bulk Antiferromagnetic NiO
+
+- We start by investigating a simple bulk antiferromagnet - NiO
+  - Ni spins up ($Ni_{\uparrow}$, pink) and Ni spins down ($Ni_{\downarrow}$, green) align on alternating [111] planes
+  - Magnetic phase contribution is ~500x smaller in magnitude compared to electrostatic contribution
+- "Naive" subtraction reconstruction is prone to noise amplification
+- By contrast, simultaneous adjoint reconstruction is much more robust, enabling independent regularization 
+
+<Tabs>
+  <TabItem value="atomic-model" label="Atomic Model" default>
+    <BulkAtomicModelImage width="80%" height="auto"/>
+  </TabItem>
+  <TabItem value="ground-truth" label="Ground Truth" default>
+    <BulkGroundTruthImage width="80%" height="auto"/>
+  </TabItem>
+  <TabItem value="naive-recon" label="'Naive' Subtraction Reconstruction" default>
+    <BulkNaiveImage width="80%" height="auto"/>
+  </TabItem>
+  <TabItem value="joint-recon" label="Simultaneous Adjoint Reconstruction" default>
+    <BulkJointImage width="80%" height="auto"/>
+  </TabItem>
+</Tabs>
+

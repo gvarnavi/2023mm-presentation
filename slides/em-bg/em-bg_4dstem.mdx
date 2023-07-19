@@ -1,0 +1,40 @@
+---
+id: em-bg_4dstem
+sidebar_position: 1
+title: 4DSTEM
+hide_table_of_contents: true
+hide_title: true
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import STEMSchematic from '@site/static/img/4DSTEM_defocused_looping.gif';
+import Multislice4DstemComponent from '@site/src/components/Multislice4DstemComponent.js';
+
+## 4D Scanning Transmission Electron Microscopy
+
+
+<Tabs>
+  <TabItem value="schematic" label="Schematic Description" default>
+
+<ul>
+  <li> Focused electron beam scanned across sample </li>
+  <ul>
+    <li> Large convergence angle &rarr; atomic resolution </li>
+  </ul>
+  <li> Diffraction intensities are collected on a fast detector at each scan position </li>
+  <ul>
+    <li> 2D diffraction patterns on a 2D raster grid &rarr; "4D-STEM" </li>
+  </ul>
+</ul>
+  
+    <figure>
+      <img src={STEMSchematic} alt="4DSTEM Schematic" width="50%" height="auto"/>
+    </figure>
+  </TabItem>
+  <TabItem value="interactive-simulation" label="Interactive Simulation">
+    <Multislice4DstemComponent />
+  </TabItem>
+</Tabs>
+

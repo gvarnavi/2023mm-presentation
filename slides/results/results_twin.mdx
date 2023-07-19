@@ -1,0 +1,32 @@
+---
+id: results_twin
+sidebar_position: 3
+title: Twinned Antiferromagnets
+hide_table_of_contents: true
+hide_title: true
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import TwinAtomicModelImage from '@site/static/img/NiO-twin_atomic-model.svg';
+import TwinGroundTruthImage from '@site/static/img/NiO-twin_ground-truth.svg';
+import TwinJointImage from '@site/static/img/NiO-twin_joint-recon.svg';
+
+## Twinned Antiferromagnetic NiO
+
+- Since our technique makes no use of prior-information (notably the use of periodicity)
+  - It can reconstruct more complex magnetizations, such as a twinned NiO antiferromagnet
+
+<Tabs>
+  <TabItem value="atomic-model" label="Atomic Model" default>
+    <TwinAtomicModelImage width="80%" height="auto"/>
+  </TabItem>
+  <TabItem value="ground-truth" label="Ground Truth" default>
+    <TwinGroundTruthImage width="80%" height="auto"/>
+  </TabItem>
+  <TabItem value="joint-recon" label="Simultaneous Adjoint Reconstruction" default>
+    <TwinJointImage width="80%" height="auto"/>
+  </TabItem>
+</Tabs>
+

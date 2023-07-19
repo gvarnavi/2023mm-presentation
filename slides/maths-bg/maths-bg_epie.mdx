@@ -1,0 +1,34 @@
+---
+id: maths-bg_epie
+sidebar_position: 3
+title: Extended Ptychographic Iterative Engine
+hide_table_of_contents: true
+hide_title: true
+---
+
+import EpieComponent from '@site/src/components/EpieComponent.js';
+
+## Electron Ptychography
+
+- Each diffraction intensity measurement &rarr; non-convex set
+  - Problem statement: reconstruct probe $\hat{\mathcal{P}}$ and object $\hat{\mathcal{O}}$ from intensity measurements $I$
+
+$$
+\begin{aligned}
+  \psi_j(\boldsymbol{r}) &= \hat{\mathcal{P}}(\boldsymbol{r}) \times \hat{\mathcal{O}}(\boldsymbol{r}-\boldsymbol{R}_j) \\
+  I_j(\boldsymbol{k}) &= \left| \mathcal{F}\left[\psi_j(\boldsymbol{r})\right]\right|^2
+\end{aligned}
+$$
+
+- Rich literature of reconstruction algorithms including stochastic gradient descent (ePIE) and proximal-gradient methods:
+  - "Fourier" projection
+    - Ensures the reconstructed probe and object accurately reproduces the measured intensities
+  - "Overlap" projection
+    - Ensures the reconstructed probe and object are self-consistent with adjacent scanning positions
+
+<details>
+  <summary> Interactive Extended Ptychographic Iterative Engine Simulation </summary>
+    <EpieComponent />
+</details>
+
+
