@@ -2,7 +2,6 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 const math = require('remark-math');
 const katex = require('rehype-katex');
@@ -33,10 +32,8 @@ const config = {
     locales: ['en'],
   },
 
-  markdown: {
-    mermaid:true,
+  themeConfig: {
   },
-  themes: ['@docusaurus/theme-mermaid'],
 
   presets: [
     [
@@ -45,6 +42,7 @@ const config = {
         docs: {
 	  path: 'slides/',
           routeBasePath: 'slides/',
+	  breadcrumbs: false,
           sidebarPath: require.resolve('./sidebars.js'),
 	  remarkPlugins: [math],
 	  rehypePlugins: [katex],
@@ -67,7 +65,6 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
       docs: {
 	sidebar:{
 	  hideable: true,
@@ -77,12 +74,12 @@ const config = {
       navbar: {
         title: 'M&M 2023 Presentation',
         logo: {
-          alt: 'Presentations Logo',
+          alt: 'Presentations',
           src: 'img/favicon.svg',
         },
         items: [
           {
-	    to: 'slides/intro/',
+	    to: 'slides/em-bg/em-bg_outline/',
             position: 'left',
             label: 'Slides',
           },
@@ -94,7 +91,10 @@ const config = {
       },
       prism: {
         theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+      },
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
       },
     }),
 };

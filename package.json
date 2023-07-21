@@ -16,10 +16,9 @@
   "dependencies": {
     "@docusaurus/core": "2.4.1",
     "@docusaurus/preset-classic": "2.4.1",
-    "@docusaurus/theme-mermaid": "^2.4.1",
-    "@gvarnavi/epie-component": "https://api.observablehq.com/@gvarnavi/epie-component@49.tgz?v=3",
+    "@gvarnavi/epie-component": "https://api.observablehq.com/@gvarnavi/epie-component@57.tgz?v=3",
     "@gvarnavi/flower-sets-component": "https://api.observablehq.com/@gvarnavi/flower-sets-component@43.tgz?v=3",
-    "@gvarnavi/multislice-4dstem-component": "https://api.observablehq.com/@gvarnavi/multislice-4dstem-component@120.tgz?v=3",
+    "@gvarnavi/multislice-4dstem-component": "https://api.observablehq.com/@gvarnavi/multislice-4dstem-component@130.tgz?v=3",
     "@gvarnavi/two-convex-sets-component": "https://api.observablehq.com/@gvarnavi/two-convex-sets-component.tgz?v=3",
     "@gvarnavi/two-nonconvex-sets-component": "https://api.observablehq.com/@gvarnavi/two-nonconvex-sets-component@46.tgz?v=3",
     "@mdx-js/react": "^1.6.22",

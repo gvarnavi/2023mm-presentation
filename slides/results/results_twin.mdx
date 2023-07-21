@@ -10,23 +10,23 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 import TwinAtomicModelImage from '@site/static/img/NiO-twin_atomic-model.svg';
-import TwinGroundTruthImage from '@site/static/img/NiO-twin_ground-truth.svg';
-import TwinJointImage from '@site/static/img/NiO-twin_joint-recon.svg';
+import TwinGroundTruthImage from '@site/static/img/NiO-twin_ground-truth.png';
+import TwinJointImage from '@site/static/img/NiO-twin_joint-recon.png';
 
 ## Twinned Antiferromagnetic NiO
 
-- Since our technique makes no use of prior-information (notably the use of periodicity)
-  - It can reconstruct more complex magnetizations, such as a twinned NiO antiferromagnet
+- Technique makes no use of prior-information (such as e.g. periodicity)
+  - More complex magnetization reconstructions &rarr; twinned NiO antiferromagnet
 
 <Tabs>
   <TabItem value="atomic-model" label="Atomic Model" default>
     <TwinAtomicModelImage width="80%" height="auto"/>
   </TabItem>
   <TabItem value="ground-truth" label="Ground Truth" default>
-    <TwinGroundTruthImage width="80%" height="auto"/>
+    <img src={TwinGroundTruthImage} width="80%" height="auto"/>
   </TabItem>
   <TabItem value="joint-recon" label="Simultaneous Adjoint Reconstruction" default>
-    <TwinJointImage width="80%" height="auto"/>
+    <img src={TwinJointImage} width="80%" height="auto"/>
   </TabItem>
 </Tabs>
 

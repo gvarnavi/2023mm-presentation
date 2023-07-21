@@ -23,32 +23,33 @@ $$
 <Tabs>
 <TabItem value="naive" label="'Naive' Subtraction" default>
 
-- Electrostatic contribution is invariant under time-reversal symmetry, while magnetic contribution changes sign
-  - For inversion-symmetric materials, we can separate these signals by "flipping" the sample
+- Electrostatic contribution &rarr; invariant under time-reversal symmetry
+- Magnetic contribution &rarr; changes sign under time-reversal symmetry
+  - Inversion-symmetry: "flip" sample and record two measurements:
 
 $$
-	\phi_e = \frac{1}{2}\left(\phi^{\rightarrow} + \phi^{\leftarrow} \right) \qquad \text{and} \qquad
-	\phi_m = \frac{2}{2}\left(\phi^{\rightarrow} - \phi^{\leftarrow} \right)
+	\phi_e = \frac{1}{2}\left(\phi^{\rightarrow} {\color{#b880ff} +} \phi^{\leftarrow} \right) \qquad \text{and} \qquad
+	\phi_m = \frac{1}{2}\left(\phi^{\rightarrow} {\color{#b880ff} -} \phi^{\leftarrow} \right)
 $$
 </TabItem>
 
 <TabItem value="simultaneous" label="Simultaneous Adjoint Operator">
 
-- Since we know how the forward-model for our measurement changes when we "flip" the sample
+- Forward-model for our measurement as we "flip" the sample
 
 $$
 \begin{aligned}
-  \psi_j^{\rightarrow} &= \mathcal{P} \times \exp(i V) \times \exp(i A_z)  \\
-  \psi_j^{\leftarrow} &= \mathcal{P} \times \exp(i V) \times \exp(-i A_z)
+  \psi^{\rightarrow} &= \mathcal{P} \times \exp\left(i \left(V_p {\color{#b880ff} +} i A_z\right)\right)  \\
+  \psi^{\leftarrow} &= \mathcal{P} \times \exp\left(i \left(V_p {\color{#b880ff} -} i A_z\right)\right)
 \end{aligned}
 $$
   
-- We can reconstruct the electrostatic and magnetic contributions jointly using an appropriate adjoint:
+- Simultaneous electrostatic and magnetic adjoint operator:
 
 $$
 \begin{aligned}
-  V' &= V + \beta \times \left(\Re\left\{ -i \exp(-i (V{\color{red} +}A_z)) \times \mathcal{P}^* \times \Delta \psi_j^{\rightarrow} \right\} {\color{red} +} \Re\left\{ -i \exp(-i (V{\color{red} -}A_z)) \times \mathcal{P}^* \times \Delta \psi_j^{\leftarrow} \right\} \right) /\left|\mathcal{P}\times\exp(i A_z)\right|^2 \\
-  A_z' &= A_z + \beta \times \left(\Re\left\{ -i \exp(-i (V{\color{red} +}A_z)) \times \mathcal{P}^* \times \Delta \psi_j^{\rightarrow} \right\} {\color{red} -} \Re\left\{-i \exp(-i (V{\color{red} -}A_z)) \times \mathcal{P}^* \times \Delta \psi_j^{\leftarrow} \right\} \right) /\left|\mathcal{P}\times\exp(i V)\right|^2
+  \Delta V_p &\propto \left(\Re\left\{ -i \exp(-i (V_p{\color{#b880ff} +}A_z)) \times \mathcal{P}^* \times \Delta \psi^{\rightarrow} \right\} {\color{#b880ff} +} \Re\left\{ -i \exp(-i (V_p{\color{#b880ff} -}A_z)) \times \mathcal{P}^* \times \Delta \psi^{\leftarrow} \right\} \right) \\
+  \Delta A_z & \propto \left(\Re\left\{ -i \exp(-i (V_p{\color{#b880ff} +}A_z)) \times \mathcal{P}^* \times \Delta \psi^{\rightarrow} \right\} {\color{#b880ff} -} \Re\left\{-i \exp(-i (V_p{\color{#b880ff} -}A_z)) \times \mathcal{P}^* \times \Delta \psi^{\leftarrow} \right\} \right)
 \end{aligned}
 $$
 </TabItem>

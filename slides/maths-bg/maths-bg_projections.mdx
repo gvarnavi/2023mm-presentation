@@ -15,29 +15,26 @@ import FlowerSetsComponent from '@site/src/components/FlowerSetsComponent.js';
 
 ## Projection Set Algorithms
 
-- Proximal gradient or "projection-set" methods are a very powerful technique to solve non-convex inverse problems  
-- Suppose we wish to find the solution at the intersection of two sets
-  - The catch: we're only allowed to operate on one set a time
+- Proximal gradient methods are a powerful technique to solve non-convex inverse problems  
+- Problem: find the intersection of two sets
+  - Catch: only allowed to operate on one set a time
 
-<Tabs>
+<Tabs Lazy>
   <TabItem value="two-convex-sets" label="Two Convex Sets" default>
   <ul>
-    <li> For two convex sets, the naive "alternating projections" algorithm is guaranteed to converge </li>
+    <li> Two convex sets &rarr; "alternating projections" guaranteed to converge </li>
   </ul>
     <TwoConvexSetsComponent />
   </TabItem>
   <TabItem value="two-nonconvex-sets" label="Two Non-convex Sets">
   <ul>
-    <li> For two convex sets, the naive "alternating projections" algorithm is guaranteed to converge </li>
-    <li> What about two non-convex sets where our naive algorithm gets stuck? </li>
+    <li> Two non-convex sets &rarr; "generalized projections" show more robust convergence </li>
   </ul>
     <TwoNonconvexSetsComponent />
   </TabItem>
   <TabItem value="multiple-sets" label="Multiple Non-convex Sets">
   <ul>
-    <li> For two convex sets, the naive "alternating projections" algorithm is guaranteed to converge </li>
-    <li> What about two non-convex sets where our naive algorithm gets stuck? </li>
-    <li> Multiple non-convex sets &rarr; consistency across parallel projections </li>
+    <li> Multiple non-convex sets &rarr; require consistency across parallel projections </li>
   </ul>
     <FlowerSetsComponent />
   </TabItem>

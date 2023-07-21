@@ -10,8 +10,8 @@ import EpieComponent from '@site/src/components/EpieComponent.js';
 
 ## Electron Ptychography
 
-- Each diffraction intensity measurement &rarr; non-convex set
-  - Problem statement: reconstruct probe $\hat{\mathcal{P}}$ and object $\hat{\mathcal{O}}$ from intensity measurements $I$
+- Each diffraction pattern &rarr; non-convex set
+  - Problem: reconstruct probe $\hat{\mathcal{P}}$ and object $\hat{\mathcal{O}}$ from diffraction intensities $I$
 
 $$
 \begin{aligned}
@@ -20,11 +20,11 @@ $$
 \end{aligned}
 $$
 
-- Rich literature of reconstruction algorithms including stochastic gradient descent (ePIE) and proximal-gradient methods:
+- Rich literature of reconstruction algorithms:
   - "Fourier" projection
-    - Ensures the reconstructed probe and object accurately reproduces the measured intensities
+    - Reconstructed probe and object accurately reproduce measured intensities
   - "Overlap" projection
-    - Ensures the reconstructed probe and object are self-consistent with adjacent scanning positions
+    - Reconstructed probe and object are self-consistent with adjacent scanning positions
 
 <details>
   <summary> Interactive Extended Ptychographic Iterative Engine Simulation </summary>

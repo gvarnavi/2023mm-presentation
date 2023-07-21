@@ -11,17 +11,12 @@ import Py4DSTEMImage from '@site/static/img/py4dstem-phase-retrieval.svg';
 
 ## Phase Retrieval in py4DSTEM
 
-- Implemented suite of phase retrieval algorithms, including iterative DPC and Parallax depth-sectioning
+- Suite of phase retrieval algorithms, including iterative DPC and Parallax
 
-<Py4DSTEMImage width="85%" height="auto"/>
-
-- Iterative ptychography features:
-  - Gradient-descent and projection-set algorithms
-  - STEM-specific regularizations (e.g. real-valued potential object, probe aberration fitting, etc. )
-  - Mixed-state reconstructions (with orthogonal-probe-relaxation)
-  - Single-slice and multi-slice reconstructions
-  - Overlap tomography (joint ptychographic-tomographic) reconstructions
-  - ** Simultaneous reconstructions for magnetic fields**
+<Figure>
+<Py4DSTEMImage width="80%" height="auto"/>
+<figcaption> Tutorial dataset from Y Jiang et al, Nature 559, 343 (2018) </figcaption>
+</Figure>
 
 <details>
   <summary> User-friendly Code </summary>
@@ -43,7 +38,15 @@ import Py4DSTEMImage from '@site/static/img/py4dstem-phase-retrieval.svg';
 ```
 
 Check out our tutorial notebooks [here](https://github.com/py4dstem/py4DSTEM_tutorials/tree/main/notebooks)!  
-See also talk by Stephanie Ribet tomorrow (Wed July 26 @ 11:00am, Room 200B in symposium A04.06)
+See also talk by Dr. Stephanie Ribet tomorrow (Wed July 26 @ 11:00am, Room 200B in symposium A04.06)
 
 </details>
+
+- Iterative ptychography features:
+  - Gradient-descent and projection-set algorithms
+  - STEM-specific regularizations (e.g. real-valued potential object, probe aberration fitting, etc. )
+  - Mixed-state reconstructions (with orthogonal-probe-relaxation)
+  - Single-slice and multi-slice reconstructions
+  - Overlap tomography (joint ptychographic-tomographic) reconstructions
+  - ** Simultaneous reconstructions for magnetic fields**
 

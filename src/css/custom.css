@@ -29,22 +29,22 @@
 }
 
 .hero__title {
-    font-size: 4rem;
-    --ifm-heading-color:#000;
+  font-size: 4rem;
+  --ifm-heading-color:#000;
 }
 
 .hero__subtitle {
-    font-size: 2rem;
-    --ifm-heading-color:#000;
+  font-size: 2rem;
+  --ifm-heading-color:#000;
 }
 
 .hero__subsubtitle {
-    font-size: 1.5rem;
-    --ifm-heading-color:#000;
+  font-size: 1.5rem;
+  --ifm-heading-color:#000;
 }
 
 .footer {
-  padding:12px;
+  padding:8px;
 }
 
 .alert--info {
