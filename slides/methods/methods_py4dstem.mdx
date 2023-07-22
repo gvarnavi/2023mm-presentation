@@ -28,7 +28,7 @@ import Py4DSTEMImage from '@site/static/img/py4dstem-phase-retrieval.svg';
       semiangle_cutoff = 21.4,
   ).preprocess(
       force_com_rotation = rotation_degrees, # dpc or parallax estimate
-      fit_function = "linear", # de-scan correction
+      fit_function = "plane", # de-scan correction
   ).reconstruct(
       max_iter = 8,
       step_size = 0.5,
@@ -47,6 +47,7 @@ See also talk by Dr. Stephanie Ribet tomorrow (Wed July 26 @ 11:00am, Room 200B 
   - STEM-specific regularizations (e.g. real-valued potential object, probe aberration fitting, etc. )
   - Mixed-state reconstructions (with orthogonal-probe-relaxation)
   - Single-slice and multi-slice reconstructions
+  - Probe-position refinement
   - Overlap tomography (joint ptychographic-tomographic) reconstructions
   - ** Simultaneous reconstructions for magnetic fields**
 

@@ -1,0 +1,48 @@
+---
+id: conclusions_about
+sidebar_position: 5
+title: About This Presentation
+hide_table_of_contents: true
+hide_title: true
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import DocusaurusLogo from '@site/static/img/docusaurus-logo.svg';
+import ReactLogo from '@site/static/img/react-logo.svg';
+import ObservableLogo from '@site/static/img/observable-logo.svg';
+
+## About This Presentation
+
+This presentation was made with &#10084; using <ObservableLogo width="14px" height="14px"/>, <ReactLogo width="14px" height="14px"/>, and <DocusaurusLogo width="14px" height="14px"/>.
+
+<Tabs>
+  <TabItem value="observable-notebooks" label="Observable Notebooks" default>
+    <ul>
+      <li> The interactive widgets were all created using <a href="https://observablehq.com/"> observablehq</a>, a reactive notebook environment for javascript code </li>
+      <li> In particular, the notebooks for this presentation derive from the following "electron ptychography" <a href="https://observablehq.com/collection/@gvarnavi/electron-ptychography"> collection </a>  </li>
+      <li> Each widget was imported in a clean notebook, see e.g. <a href="https://observablehq.com/@gvarnavi/two-convex-sets-component">here</a>, and exported using the option "Runtime with React"</li>
+    </ul>
+  </TabItem>
+  <TabItem value="react-components" label="React Components">
+    <ul>
+      <li> Each widget was then yarn-installed as a separate component and placed in the src directory, see e.g. <a href="https://github.com/gvarnavi/2023mm-presentation/blob/main/src/components/TwoConvexSetsComponent.js"> here</a></li>
+      <li> The only subtleties here are to make sure to remove the paragraph-tagged attribution banner, and ensure the correct <a href="https://observablehq.com/@mootari/notebook-data"> pinned version</a> of the notebook gets yarn-installed</li>
+    </ul>
+  </TabItem>
+  <TabItem value="docusaurus-website" label="Docusaurus Website">
+    <ul>
+      <li> The website interface was made using <a href="https://docusaurus.io/"> Docusaurus</a>, a documentation-site builder using React and MDX</li>
+      <li> A number of configuration options were used to make it look more "presentation-like":</li>
+      <ul>
+        <li> <a href="https://docusaurus.io/docs/sidebar#hideable-sidebar"> Hideable sidebar </a></li>
+        <li> <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-docs#hide_table_of_contents"> Hideable table-of-contents </a> on each doc page </li>
+        <li> Used <a href="https://github.com/gvarnavi/2023mm-presentation/blob/main/src/css/custom.css"> css-styling</a> to hide observable "inspector" cells</li>
+        <li> <a href="https://docusaurus.io/docs/markdown-features/tabs"> Tabs</a> and <a href="https://docusaurus.io/docs/markdown-features#details"> details</a> elements were used to mimic slide animations</li>
+      </ul>
+      <li> Finally, the website was deployed and hosted on github pages</li>
+    </ul>
+  </TabItem>
+</Tabs>
+

@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import Link from '@docusaurus/Link';
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -12,6 +13,13 @@ function HomepageHeader() {
         <h1 className="hero__title">{siteConfig.title}</h1>
         <h2 className="hero__subtitle">{siteConfig.tagline}</h2>
         <h3 className="hero__subsubtitle">{siteConfig.customFields.author} | {siteConfig.customFields.affiliation}</h3>
+        <div className={styles.buttons}>
+          <Link
+            className="button button--secondary button--lg"
+            to="/slides/em-bg/em-bg_outline">
+            Get Started!
+          </Link>
+        </div>
       </div>
     </header>
   );
