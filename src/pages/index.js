@@ -13,6 +13,7 @@ function HomepageHeader() {
         <h1 className="hero__title">{siteConfig.title}</h1>
         <h2 className="hero__subtitle">{siteConfig.tagline}</h2>
         <h3 className="hero__subsubtitle">{siteConfig.customFields.author} | {siteConfig.customFields.affiliation}</h3>
+        <h4 className="hero__subsubsubtitle"> Follow along: bit.ly/mm23-ptycho </h4>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
